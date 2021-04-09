@@ -1,0 +1,247 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url("custom/reset.css");
+@import url("custom/main.css");
+@import url("custom/header.css");
+@import url("custom/title.css");
+@import url("custom/itineraries.css");
+@import url("custom/chat.css");
+@import url("custom/modal.css");
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Bold'), url(fonts/SpoqaHanSansNeo-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 600;
+    src: local('Spoqa Han Sans Neo Medium'), url(fonts/SpoqaHanSansNeo-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Neo Regular'), url(fonts/SpoqaHanSansNeo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Neo Light'), url(fonts/SpoqaHanSansNeo-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    src: local('Gmarket Sans Bold'), url(fonts/GmarketSansTTFBold.ttf);
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 500;
+    src: local('Gmarket Sans Medium'), url(fonts/GmarketSansTTFMedium.ttf);
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+    font-size: 16px;
+    width: 1064px;
+    margin: 0 auto;
+    line-height: 1;
+    padding-top: 64px;
+    overflow-x: hidden;
+}
+
+/* font style */
+.text-modal-header-title {
+    font-family: Gmarket Sans TTF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.text-modal-subtitle {
+    font-family: Spoqa Han Sans Neo;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #9E9E9E;
+    display: block;
+}
+
+.text-modal-body {
+    font-family: Spoqa Han Sans Neo;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: #353535;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.square-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    border-radius: 8px;
+    background-color: #FF9090;
+    color: #2E2E2E;
+
+}
+
+.btn-small {
+    width: 55px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.btn-normal {
+    width: 118px;
+    height: 48px;
+    font-size: 15px;
+}
+
+.btn-icon {
+    width: 124px;
+    height: 48px;
+    font-size: 15px;
+}
+
+.btn-large {
+    width: 336px;
+    height: 60px;
+    font-size: 17px;
+}
+
+.btn-icon > img {
+    margin-right: 8px;
+}
+
+.btn-cancel {
+    background-color: #c4c4c4;
+    margin-right: 12px;
+}
+
+.style-outline-btn {
+    border: 1px solid #ff9090;
+    color: #ff9090;
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+button img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input {
+    border: none;
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: Spoqa Han Sans Neo;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9E9E9E;
+}
+
+.select-arrow {
+    background: url("icon/i-down-arrow.svg") no-repeat #f5f5f5;
+    background-position: center right 16px;
+}
+
+.style-select-option {
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    background-color: white;
+}
+
+.itinerary-btn-more {
+    background-image: url("icon/right-arrow.svg");
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+#btn-disabled {
+    color: #c4c4c4;
+    background-color: #E5E5E5;
+}

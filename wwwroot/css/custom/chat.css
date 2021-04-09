@@ -1,0 +1,210 @@
+.live-chat-container {
+    position: sticky;
+    right: 0;
+    top: 63px;
+    width: 336px;
+    height: 703px; /* 채팅 섹션 높이: 브라우저 height - 64px */
+    background-color: #F0F0F0;
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.live-chat-titlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 335px;
+    height: 50px;
+    background-color: white;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    margin-right: 1px;
+}
+
+.live-chat-titlebar > img {
+    margin-right: 6px;
+}
+
+.live-chat-title {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 14px;
+    color: #2E2E2E;
+}
+
+.live-chat-room {
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-anchor: none;
+    height: 553px;
+    padding: 0 14px 8px 14px;
+}
+
+.live-chat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.live-chat:first-child {
+    padding-top: 18px;
+}
+
+.user-profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+}
+
+.user-chat .user-name {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 11px;
+    margin-bottom: 3px;
+    margin-top: 6px;
+}
+
+.chat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.user-chat .chat-bubble {
+    padding: 10px 10px 8px 10px;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    max-width: 236px;
+    word-break: break-all;
+}
+
+.user-chat .chat-time {
+    font-size: 10px;
+    margin-left: 4px;
+    padding-bottom: 3px;
+}
+
+.live-chat-input {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    bottom: -1px;
+    right: -1px;
+    width: 336px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    padding: 14px 14px 14px 16px;
+}
+
+.live-chat-input.user2 {
+    right: -400px;
+}
+
+.live-chat-input.user3 {
+    right: -800px;
+}
+
+.live-chat-input > textarea {
+    width: 217px;
+    height: 72px;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-family: "Spoqa Han Sans Neo";
+    font-weight: 600;
+}
+
+.live-chat-input > button {
+    width: 73px;
+    height: 72px;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    background-color: #F0F0F0;
+    color: #9E9E9E;
+    font-family: "Gmarket Sans";
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selected {
+    color: #2E2E2E;
+}
+
+#first-type,
+#third-type,
+#sixth-type {
+    margin-bottom: 8px;
+}
+
+#second-type .user-chat .chat .chat-time,
+#fifth-type .user-chat .chat .chat-time {
+    display: none;
+}
+
+#third-type .user-profile {
+    opacity: 0;
+}
+
+#third-type .user-name {
+    display: none;
+}
+
+#fourth-type .user-profile {
+    opacity: 0;
+}
+
+#fourth-type .user-name, 
+#fourth-type .chat-time {
+    display: none;
+}
+
+#activate {
+    border: 1px solid #FF9090;
+    background-color: #FFBBBB;
+    color: #2e2e2e;
+}
+
+#normal {
+    border: 1px solid #E5E5E5;
+    background-color: #F0F0F0;
+    color: #9E9E9E;
+}
+
+#fifth-type,
+#sixth-type {
+    justify-content: flex-end;
+}
+
+#fifth-type .user-profile,
+#fifth-type .user-name,
+#sixth-type .user-profile,
+#sixth-type .user-name {
+    display: none;
+}
+
+#fifth-type .user-chat .chat,
+#sixth-type .user-chat .chat {
+    flex-direction: row-reverse;
+}
+
+#fifth-type .user-chat .chat .chat-bubble,
+#sixth-type .user-chat .chat .chat-bubble {
+    background-color: #FFD464;
+    border: 1px solid #FFC83A;
+    margin-left: 4px;
+}

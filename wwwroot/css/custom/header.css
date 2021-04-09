@@ -1,0 +1,51 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: white;
+    z-index: 2;
+}
+
+.header-contents {
+    display: flex;
+    width: 1064px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 11px;
+    padding-bottom: 8px;
+}
+
+.header-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-item > li {
+    font-family: "Gmarket Sans";
+    font-weight: 500;
+    font-size: 13px;
+    width: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header-item > li:last-child {
+    margin-left: 10px;
+    margin-right: 0;
+    width: 154px;
+    height: 40px;
+    border-radius: 24px;
+    border: 1px solid #FF9090;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header-item > li:last-child a {
+    color: #FF9090;
+}

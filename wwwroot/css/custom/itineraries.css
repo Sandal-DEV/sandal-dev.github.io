@@ -1,0 +1,199 @@
+.trip-itineraries-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.itineraries-container {
+    width: 700px;
+    padding-top: 24px;
+}
+
+.itineraries-today {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.today-month::after {
+    content: "월 "
+}
+
+.today-date::after {
+    content: "일 "
+}
+
+.today-day::before {
+    content: "("
+}
+
+.today-day::after {
+    content: ")"
+}
+
+.itineraries-no-item {
+    font-family: "Gmarket Sans";
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.36);
+    margin-top: 32px;
+    margin-bottom: 24px;
+    display: none;
+}
+
+.itinerary-container {
+    height: 88px;
+    padding: 24px 30px 24px 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #F5F5F5;
+    border: 1px solid #e5e5e5;
+}
+
+.itinerary-item-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.item-header-icon {
+    margin-right: 12px;
+}
+
+.item-header-icon i {
+    width: 28px;
+    height: 28px;
+}
+
+.item-header-title {
+    width: 177px;
+}
+
+.item-name-container {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.item-time-container {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.lodging .item-time-container::after {
+    content: "체크인";
+}
+
+.item-ndname:before {
+    content: " → "
+}
+
+.item-endtime:before {
+    content: " ~ "
+}
+
+.itinerary-item-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-detail-info,
+.item-detail-tnum {
+    margin-right: 24px;
+}
+
+.item-detail-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.item-detail {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#airline .info-label::after {
+    content: "항공편명"
+}
+
+.lodging .info-label::after {
+    content: "예약사이트"
+}
+
+.item-detail-info {
+    width: 181px;
+}
+
+.item-detail-tnum {
+    width: 136px;
+}
+
+/* itinerary input style */
+.itinerary-container.itinerary-input {
+    margin-bottom: 24px;
+}
+
+.itinerary-input {
+    border: 1px solid #e5e5e5;
+    background-color: white;
+}
+
+.itinerary-input > input {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+    caret-color: royalblue;
+    width: 374px;
+}
+
+.itinerary-input .input-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    background: #E5E5E5;
+    color: #9E9E9E;
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+#save.input-button {
+    margin-right: 0;
+}
+
+#save {
+    background-color: #FF9090;
+    color: white;
+}
+
+.transit {
+    background-color: #E1EFFE;
+    border: 1px solid #C3E0FF;
+}
+
+.lodging {
+    background-color: #FFF7CF;
+    border: 1px solid #FFEAA1;
+}

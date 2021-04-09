@@ -1,0 +1,414 @@
+.main-container {
+    display: flex;
+    height: auto;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.trip-itinerary-container {
+    width: 730px;
+}
+
+.trip-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.trip-header {
+    margin-right: auto;
+}
+
+.trip-title-container {
+    padding-top: 18px;
+    position: relative;
+    height: 56px;
+    margin-bottom: 12px;
+}
+
+.trip-title {
+    width: 336px;
+    height: 36px;
+    position: absolute;
+    display: flex;
+    top: 22px;
+    padding-top: 6px;
+    left: 10px;
+    background-color: white;
+}
+
+.trip-name {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 28px;
+    color: #2E2E2E;
+}
+
+.trip-title-container .trip-title-input {
+    position: absolute;
+    width: 336px;
+}
+
+.trip-title-container > .trip-title-input > input[type="text"] {
+    border: none;
+    outline: none;
+    width: 336px;
+    padding: 8px 10px 5px 10px;
+}
+
+.trip-title-container > .trip-title-input > input[type="text"]:focus {
+    box-shadow: 0 0 0 2px #FF9090;
+    border-radius: 10px;
+}
+
+.trip-title-container .trip-title-input button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+}
+
+.trip-title-container .trip-title {
+    position: absolute;
+    top: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.trip-name {
+    margin-right: 6px;
+}
+
+.trip-rightside {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 6px;
+    margin-right: 30px;
+}
+
+.trip-period {
+    height: 38px;
+    border: 2px solid #2E2E2E;
+    border-radius: 24px;
+    background-color: #F8F8F8;
+}
+
+.share-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.share-people {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.user-friends {
+    margin-right: 20px;
+    position: relative;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #F8F8F8;
+}
+
+.user.user-third {
+    position: absolute;
+    right: 64px;
+    bottom: 0;
+}
+
+.user.user-second {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+}
+
+.user.user-first {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.user-label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    width: max-content;
+    height: 17px;
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 11px;
+    border-radius: 2px;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.user-friends > .user > .user-label {
+    visibility: hidden;
+}
+
+.user:hover .user-label {
+    visibility: visible;
+}
+
+.user i {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.user.more-friends{
+    background-color: #C4C4C4;
+    position: absolute;
+    right: 96px;
+    bottom: 0;
+}
+
+.user .user-count {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.user.me {
+    width: 54px;
+    height: 54px;
+    border-width: 3px;
+    position: relative;
+    margin-right: 24px;
+}
+
+.user.me i {
+    width: 30px;
+    height: 30px;
+}
+
+.me-edit-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+}
+
+.me-edit-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+.trip-date-container {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.trip-date-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    max-width: 728px;
+    overflow: auto;
+}
+
+.trip-date-item > button {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.24);
+}
+
+.trip-date-item .month::after {
+    content: "/"
+}
+
+.add-item {
+    margin-bottom: 200px;
+}
+
+.em-koala-border {
+    border: 2px solid #97ADB4;
+}
+
+.em-koala-bg-color {
+    background-color: #97ADB4;
+}
+
+.em-hedgehog-border {
+    border: 2px solid #BBAA9D;
+}
+
+.em-hedgehog-bg-color {
+    background-color: #BBAA9D;
+}
+
+.em-hatching_chick-border {
+    border: 2px solid #FFE193;
+}
+
+.em-hatching_chick-bg-color {
+    background: #FFE193;
+}
+
+.em-bear-border {
+    border: 2px solid #FFB590;
+}
+
+.em-bear-bg-color {
+    background-color: #FFB590;
+}
+
+/* trip-period-wrap */
+.trip-period-wrap {
+    position: relative;
+}
+
+.trip-period {
+    height: 38px;
+    border: 2px solid #2E2E2E;
+    border-radius: 24px;
+    background-color: #F8F8F8;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.period-date {
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.period-date:last-child::before {
+    content: " - "
+}
+
+/* change-name-wrap */
+.user-me {
+    position: relative;
+}
+
+.small-modal-wrap {
+    position: absolute;
+    border: 1px solid #f5f5f5;
+    border-radius: 16px;
+    background-color: white;
+    z-index: 20;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* modal: change-name-wrap */
+.change-name-wrap {
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 24px;
+}
+
+.change-name-title {
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.change-name-wrap input[type="text"] {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 301px;
+    padding: 22px 22px 19px 22px;
+    outline: none;
+    margin-bottom: 22px;
+}
+
+.change-name-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* modal: share-link-wrap */
+.share-link-wrap {
+    top: 154px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 34px 40px;
+}
+
+.share-link-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.share-link-title {
+    font-family: "Gmarket Sans";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.link-input-wrap.item-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 12px 12px 22px;
+    width: 582px;
+    margin-bottom: 8px;
+}
+
+.link-input-wrap > button {
+    width: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.copy-notice {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff9090;
+    margin-left: 22px;
+    display: none;
+}
+
+.share-link-btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+}
+
+#copied {
+    display: block;
+}
+
+
+

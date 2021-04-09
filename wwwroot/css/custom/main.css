@@ -1,0 +1,25 @@
+.main-wrap {
+    font-family: "Gmarket Sans";
+    padding-top: 133px;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-bottom: 24px;
+}
+
+.main-intro {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 48px;
+}
+
+.main-wrap button {
+    width: 336px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: 700;
+}
