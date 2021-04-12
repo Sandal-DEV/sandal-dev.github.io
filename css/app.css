@@ -231,6 +231,7 @@ input::placeholder {
 }
 
 .itinerary-btn-more {
+    background-image: url("icon/i-right-arrow.svg");
     width: 30px;
     height: 30px;
     padding: 0;
