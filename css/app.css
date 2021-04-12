@@ -10,25 +10,25 @@
 @font-face {
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 700;
-    src: local('Spoqa Han Sans Neo Bold'), url(fonts/SpoqaHanSansNeo-Bold.ttf);
+    src: local('Spoqa Han Sans Neo Bold'), url(fonts/SpoqaHanSansNeo-Bold.woff);
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 600;
-    src: local('Spoqa Han Sans Neo Medium'), url(fonts/SpoqaHanSansNeo-Medium.ttf);
+    src: local('Spoqa Han Sans Neo Medium'), url(fonts/SpoqaHanSansNeo-Medium.woff);
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    src: local('Spoqa Han Sans Neo Regular'), url(fonts/SpoqaHanSansNeo-Regular.ttf);
+    src: local('Spoqa Han Sans Neo Regular'), url(fonts/SpoqaHanSansNeo-Regular.woff);
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 400;
-    src: local('Spoqa Han Sans Neo Light'), url(fonts/SpoqaHanSansNeo-Light.ttf);
+    src: local('Spoqa Han Sans Neo Light'), url(fonts/SpoqaHanSansNeo-Light.woff);
 }
 
 @font-face {
@@ -231,7 +231,7 @@ input::placeholder {
 }
 
 .itinerary-btn-more {
-    background-image: url("icon/right-arrow.svg");
+    background-image: url("icon/i-right-arrow.svg");
     width: 30px;
     height: 30px;
     padding: 0;
