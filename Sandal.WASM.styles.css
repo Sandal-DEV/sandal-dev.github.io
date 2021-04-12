@@ -223,13 +223,14 @@
     display: block;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
-.page[b-c6zmbkfwnx] {    
+/* 제공하는 메인화면 클래스 */
+/* .page {    
     display: flex;
     height: auto;
     position: relative;
     justify-content: space-between;
     align-items: flex-start;
-}
+} */
 
 .main[b-c6zmbkfwnx] {
     flex: 1;

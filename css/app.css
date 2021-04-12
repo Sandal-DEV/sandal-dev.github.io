@@ -178,6 +178,7 @@ select {
 
 .style-outline-btn {
     border: 1px solid #ff9090;
+    border-radius: 24px;
     color: #ff9090;
     font-family: "Gmarket Sans";
     font-weight: 700;
@@ -220,11 +221,6 @@ input::placeholder {
     font-size: 16px;
     line-height: 19px;
     color: #9E9E9E;
-}
-
-.select-arrow {
-    background: url("icon/i-down-arrow.svg") no-repeat #f5f5f5;
-    background-position: center right 16px;
 }
 
 .style-select-option {

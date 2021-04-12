@@ -387,11 +387,38 @@
     height: 28px;
 }
 
+/* 상세 일정 입력 - 시간 선택 */
+.select-time-wrap.item-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.select-time-wrap > select {
+    width: inherit;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.select-time-wrap .select-time-icon {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+}
+
+/* 상세 일정 입력 - 시간 입력 checkbox */
 .time-check-wrap input[type="checkbox"] {
     display: none;
 }
 
 .time-check-wrap input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.time-check-wrap input[type="checkbox"] + label .time-check-icon {
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -400,23 +427,17 @@
     cursor: pointer;
 }
 
-.time-check-wrap {
-    position: relative;
-    margin-left: 12px;
-}
-
 .time-check-wrap input[type="checkbox"] + label span {
-    position: absolute;
-    width: 96px;
-    top: 8px;
-    left: 40px;
-    display: block;
     font-weight: 600;
+    margin-left: 10px;
 }
 
-.time-check-wrap input[type="checkbox"]:checked + label {
-    background: url("icon/i-check.svg") #ff9090 no-repeat center;
-    border: none;
+.time-check-wrap input[type="checkbox"]:checked + label .time-check-icon {
+    background-color: #ff9090;
+    border: 2px solid #ff9090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .item-wrap::placeholder {
@@ -467,17 +488,26 @@
 
 /* 메인화면 modal 02: 여행 링크 복사 */
 .modal-wrap.modal-copy-link {
+    width: 800px;
     border: 3px solid #ff9090;
     height: auto;
     text-align: center;
     padding: 46px 40px 42px 40px;
 }
 
+.copy-link-title-wrap {
+    position: relative;
+    display: flex;
+    margin-bottom: 28px;
+}
+
 .copy-link-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: "Gmarket Sans";
     font-weight: 700;
     font-size: 28px;
-    margin-bottom: 28px;
 }
 
 .copy-link-body {
@@ -498,13 +528,12 @@
 }
 
 .copy-link-done {
+    display: block;
+    position: absolute;
     font-size: 13px;
     font-weight: 700;
-    text-align: left;
-    margin-left: 20px;
     color: #ff9090;
-    margin-bottom: 0;
-    display: none;
+    margin-left: 20px;
 }
 
 .btn-wrap {

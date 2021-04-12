@@ -1,7 +1,6 @@
 .main-container {
     display: flex;
     height: auto;
-    position: relative;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -31,11 +30,9 @@
 
 .trip-title {
     width: 336px;
-    height: 36px;
+    height: 45px;
     position: absolute;
-    display: flex;
-    top: 22px;
-    padding-top: 6px;
+    top: 19px;
     left: 10px;
     background-color: white;
 }
@@ -55,6 +52,7 @@
 .trip-title-container > .trip-title-input > input[type="text"] {
     border: none;
     outline: none;
+    background-color: white;
     width: 336px;
     padding: 8px 10px 5px 10px;
 }
@@ -72,8 +70,6 @@
 }
 
 .trip-title-container .trip-title {
-    position: absolute;
-    top: 26px;
     display: flex;
     align-items: center;
 }
@@ -356,6 +352,7 @@
 
 /* modal: share-link-wrap */
 .share-link-wrap {
+    width: 800px;
     top: 154px;
     left: 50%;
     transform: translateX(-50%);
@@ -380,7 +377,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 13px 12px 12px 22px;
-    width: 582px;
     margin-bottom: 8px;
 }
 
@@ -391,12 +387,13 @@
 }
 
 .copy-notice {
+    display: block;
     position: absolute;
     font-size: 13px;
     font-weight: 700;
     color: #ff9090;
-    margin-left: 22px;
-    display: none;
+    margin-left: 12px;
+    margin-top: 6px;
 }
 
 .share-link-btn-wrap {
@@ -404,10 +401,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 34px;
-}
-
-#copied {
-    display: block;
 }
 
 

@@ -3,7 +3,7 @@
     right: 0;
     top: 63px;
     width: 336px;
-    height: 703px; /* 채팅 섹션 높이: 브라우저 height - 64px */
+    height: 92vh; /* 채팅 섹션 높이: 브라우저 height - 64px */
     background-color: #F0F0F0;
     border-left: 1px solid #E5E5E5;
     border-right: 1px solid #E5E5E5;
@@ -48,7 +48,7 @@
 }
 
 .live-chat:first-child {
-    padding-top: 18px;
+    margin-top: 18px;
 }
 
 .user-profile {
@@ -207,4 +207,30 @@
     background-color: #FFD464;
     border: 1px solid #FFC83A;
     margin-left: 4px;
+}
+
+#zero-type .user-profile,
+#zero-type .chat-bubble,
+#zero-type .chat-time {
+    display: none;
+}
+
+/* 사용자 입장 알림 */
+#zero-type {
+    width: 100%;
+    height: 27px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+#zero-type .user-chat {
+    transform: translateY(-10%);
+}
+
+#zero-type .user-name::after {
+    content: "님이 입장하셨습니다.";
+    font-weight: 500;
 }

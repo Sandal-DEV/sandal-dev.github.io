@@ -1,25 +1,97 @@
-.main-wrap {
-    font-family: "Gmarket Sans";
-    padding-top: 133px;
+.home-container {
+    width: 1064px;
 }
 
-.main-title {
+.home-wrap {
+    font-family: "Gmarket Sans";
+    padding-top: 140px;
+    margin-bottom: 182px;
+}
+
+.home-title {
     font-size: 48px;
     font-weight: 700;
     line-height: 64px;
     margin-bottom: 24px;
 }
 
-.main-intro {
+.home-desc {
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 }
 
-.main-wrap button {
-    width: 336px;
-    height: 60px;
-    font-size: 17px;
+.home-email-container {
+    background-color: #F5F5F5;
+    padding-top: 112px;
+    padding-bottom: 136px;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+}
+
+.home-email-wrap {
+    width: 1064px;
+    margin: 0 auto;
+}
+
+.home-email-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+}
+
+.home-email-icon i {
+    width: 40px;
+    height: 40px;
+}
+
+.home-email-title {
+    font-family: "Gmarket Sans";
     font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 14px;
+}
+
+.home-email-desc {
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 26px;
+}
+
+.home-email-container input {
+    display: block;
+    background-color: white;
+    width: 1064px;
+    height: 63px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 22px;
+    font-size: 16px;
+    font-family: "Spoqa Han Sans Neo";
+    font-weight: 500;
+}
+
+.home-email-container textarea {
+    display: block;
+    width: 1064px;
+    height: 191px;
+    margin-bottom: 30px;
+    padding: 22px;
+    border: none;
+    font-size: 16px;
+    font-family: "Spoqa Han Sans Neo";
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.home-email-container input::placeholder,
+.home-email-container textarea::placeholder {
+    font-size: 16px;
+    font-family: "Spoqa Han Sans Neo";
+    font-weight: 600;
+    color: #9E9E9E;
 }

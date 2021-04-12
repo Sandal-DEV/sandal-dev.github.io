@@ -6,14 +6,25 @@
 
 .itineraries-container {
     width: 700px;
-    padding-top: 24px;
+}
+
+.itinerary-header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .itineraries-today {
     font-family: "Gmarket Sans";
     font-weight: 700;
     font-size: 16px;
+    margin-top: 24px;
     margin-bottom: 20px;
+}
+
+.itinerary-header-wrap > button {
+    margin-bottom: 13px !important;
+    margin-top: 14px !important;
 }
 
 .today-month::after {
@@ -43,6 +54,7 @@
     display: none;
 }
 
+/* 일정 카드: 공통 */
 .itinerary-container {
     height: 88px;
     padding: 24px 30px 24px 30px;
@@ -51,11 +63,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-    background-color: #F5F5F5;
-    border: 1px solid #e5e5e5;
+    position: relative;
 }
 
-.itinerary-item-header {
+.itinerary-item-header-wrap {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -67,27 +78,23 @@
 }
 
 .item-header-icon i {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
 }
 
 .item-header-title {
     width: 177px;
 }
 
-.item-name-container {
+.item-name-wrap {
     font-weight: 700;
     font-size: 16px;
 }
 
-.item-time-container {
+.item-time-wrap {
     margin-top: 6px;
     font-size: 14px;
     font-weight: 500;
-}
-
-.lodging .item-time-container::after {
-    content: "체크인";
 }
 
 .item-ndname:before {
@@ -96,17 +103,6 @@
 
 .item-endtime:before {
     content: " ~ "
-}
-
-.itinerary-item-detail {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item-detail-info,
-.item-detail-tnum {
-    margin-right: 24px;
 }
 
 .item-detail-label {
@@ -121,20 +117,106 @@
     font-size: 15px;
 }
 
-#airline .info-label::after {
-    content: "항공편명"
-}
-
-.lodging .info-label::after {
-    content: "예약사이트"
-}
-
-.item-detail-info {
+.itinerary-item-info-wrap {
     width: 181px;
+    margin-right: 20px;
 }
 
-.item-detail-tnum {
-    width: 136px;
+.itinerary-item-tnum-wrap {
+    width: 135px;
+    margin-right: 20px;
+}
+.itinerary-item-btn-wrap {
+    width: 55px; 
+}
+
+/* 일정 카드: basic type */
+#iti-basic {
+    background-color: #F5F5F5;
+    border: 1px solid #e5e5e5;
+}
+
+/* 일정 카드: airplane, train, bus, others 공통 */
+#iti-airplane,
+#iti-train,
+#iti-bus,
+#iti-others {
+    background-color: #E1EFFE;
+    border: 1px solid #C3E0FF;
+}
+
+/* 일정 카드: airplane type */ 
+#iti-airplane .info-label::after {
+    content: "항공편명 / 항공사";
+}
+
+#iti-airplane .tnum-label::after {
+    content: "예약번호";
+}
+
+/* 일정 카드: train type */
+#iti-train .info-label::after {
+    content: "열차";
+}
+
+#iti-train .tnum-label::after {
+    content: "좌석번호";
+}
+
+/* 일정 카드: bus type */
+#iti-bus .info-label::after {
+    content: "버스회사";
+}
+
+#iti-bus .tnum-label::after {
+    content: "좌석번호";
+}
+
+/* 일정 카드: others type */
+#iti-others .info-label::after {
+    content: "이동수단";
+}
+
+/* 일정 카드: lodging type */
+#iti-lodging {
+    background-color: #FFF7CF;
+    border: 1px solid #FFEAA1;
+}
+
+#iti-lodging .item-sttime::before {
+    content: "체크인 ";
+}
+
+#iti-lodging .info-label::after {
+    content: "예약사이트";
+}
+
+#iti-lodging .tnum-label::after {
+    content: "예약번호";
+}
+
+/* 일정 카드 버튼 : 상세 입력 & 삭제 */
+.itinerary-item-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55px;
+    height: 88px;
+    position: absolute;
+    right: 0;
+}
+
+.itinerary-item-btn-wrap > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border-radius: 0 12px 12px 0;
+}
+
+.itinerary-btn-delete {
+    background-color: #FF7575;
 }
 
 /* itinerary input style */
@@ -196,4 +278,50 @@
 .lodging {
     background-color: #FFF7CF;
     border: 1px solid #FFEAA1;
+}
+
+/* 편집 중인 일정 highlight */
+/* 다른 사용자가 일정 편집 시 <div class="itinerary-container">에 id="editing" 추가하는 것으로 제어 */
+#editing {
+    box-shadow: 0 0 0 4px #FFB590;
+}
+
+#editing::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -1px;
+    width: 32px;
+    height: 32px;
+    border-radius: 12px 0 14px 0;
+    background: url("icon/i-edit-24-white.svg") no-repeat;
+    background-position: 40% 25%;
+    background-color: #ffb590;
+}
+
+#editing::after {
+    position: absolute;
+    content: "속고 속이는 곰";
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+    font-size: 11px;
+    background-color: #ffb590;
+    padding: 2px 6px;
+    border-radius: 2px;
+    top: 6px;
+    left: 38px;
+}
+
+/* 편집 버튼 */
+#edit-btn-normal::after {
+    content: "편집";
+}
+
+#edit-btn-active {
+    background-color: #ff9090;
+    color: white;
+}
+
+#edit-btn-active::after {
+    content: "완료";
 }
