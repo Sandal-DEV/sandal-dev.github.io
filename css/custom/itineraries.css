@@ -96,7 +96,7 @@
     font-weight: 500;
 }
 
-.item-ndname:before {
+.item-subname:before {
     content: " → "
 }
 

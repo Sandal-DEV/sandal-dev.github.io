@@ -28,11 +28,16 @@
     font-family: "Gmarket Sans";
     font-weight: 500;
     font-size: 13px;
-    width: 86px;
+    width: 99px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.header-item li a {
+    color: #000000;
 }
 
 .header-item > li:last-child {
@@ -48,4 +53,13 @@
 
 .header-item > li:last-child a {
     color: #FF9090;
+}
+
+.header-item-notice {
+    position: relative;
+}
+
+.header-bell-badge {
+    position: absolute;
+    right: -17px;
 }
