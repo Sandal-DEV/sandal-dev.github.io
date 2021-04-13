@@ -646,7 +646,7 @@
     line-height: 22px;
 }
 
-.guide-card-review-btn {
+.modal-guide-card a {
     position: absolute;
     right: 28px;
     bottom: 22px;
