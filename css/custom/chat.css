@@ -1,9 +1,8 @@
 .live-chat-container {
     position: sticky;
     right: 0;
-    top: 63px;
     width: 336px;
-    height: 92vh; /* 채팅 섹션 높이: 브라우저 height - 64px */
+    max-height: 1080px;
     background-color: #F0F0F0;
     border-left: 1px solid #E5E5E5;
     border-right: 1px solid #E5E5E5;
@@ -36,8 +35,6 @@
 .live-chat-room {
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-anchor: none;
-    height: 553px;
     padding: 0 14px 8px 14px;
 }
 
@@ -51,7 +48,7 @@
     margin-top: 18px;
 }
 
-.user-profile {
+.live-chat .user-profile {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -59,6 +56,17 @@
     justify-content: center;
     align-items: center;
     margin-right: 6px;
+    background-color: #f8f8f8;
+}
+
+.live-chat .user-profile i {
+    width: 20px;
+    height: 20px;
+}
+
+.user-border {
+    border-style: solid;
+    border-width: 2px;
 }
 
 .user-chat .user-name {
@@ -84,6 +92,7 @@
     font-weight: 500;
     margin-bottom: 2px;
     max-width: 236px;
+    line-height: 16px;
     word-break: break-all;
 }
 
@@ -126,7 +135,7 @@
     font-weight: 600;
 }
 
-.live-chat-input > button {
+.chat-send-btn {
     width: 73px;
     height: 72px;
     border: 1px solid #E5E5E5;
@@ -139,6 +148,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.chat-send-btn:disabled {
+    cursor: unset;
 }
 
 #selected {
@@ -177,12 +190,6 @@
     border: 1px solid #FF9090;
     background-color: #FFBBBB;
     color: #2e2e2e;
-}
-
-#normal {
-    border: 1px solid #E5E5E5;
-    background-color: #F0F0F0;
-    color: #9E9E9E;
 }
 
 #fifth-type,

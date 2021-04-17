@@ -106,6 +106,7 @@
     margin-right: 40px;
 }
 
+/* 접속 중인 유저리스트 */
 .user-friends {
     margin-right: 20px;
     position: relative;
@@ -123,25 +124,26 @@
     background-color: #F8F8F8;
 }
 
-.user.user-third {
+.user.user-2 {
     position: absolute;
     right: 64px;
     bottom: 0;
 }
 
-.user.user-second {
+.user.user-1 {
     position: absolute;
     right: 32px;
     bottom: 0;
 }
 
-.user.user-first {
+.user.user-0 {
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
 .user-label {
+    visibility: hidden;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -156,6 +158,12 @@
     top: -22px;
     left: 50%;
     transform: translateX(-50%);
+    color: white;
+}
+
+.user-border {
+    border-style: solid;
+    border-width: 2px;
 }
 
 .user-friends > .user > .user-label {
@@ -191,6 +199,10 @@
     border-width: 3px;
     position: relative;
     margin-right: 24px;
+}
+
+.user.me.user-border {
+    border-width: 3px;
 }
 
 .user.me i {
@@ -247,38 +259,6 @@
 
 .add-item {
     margin-bottom: 200px;
-}
-
-.em-koala-border {
-    border: 2px solid #97ADB4;
-}
-
-.em-koala-bg-color {
-    background-color: #97ADB4;
-}
-
-.em-hedgehog-border {
-    border: 2px solid #BBAA9D;
-}
-
-.em-hedgehog-bg-color {
-    background-color: #BBAA9D;
-}
-
-.em-hatching_chick-border {
-    border: 2px solid #FFE193;
-}
-
-.em-hatching_chick-bg-color {
-    background: #FFE193;
-}
-
-.em-bear-border {
-    border: 2px solid #FFB590;
-}
-
-.em-bear-bg-color {
-    background-color: #FFB590;
 }
 
 /* trip-period-wrap */
