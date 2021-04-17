@@ -31,8 +31,10 @@ function enterHandler(event) {
 
 function getChatValue() {
     const chatText = document.querySelector('.chat-textarea');
-    return chatText.value;
-    //chatText.value = "";
+    const target = chatText.value;
+    chatText.value = "";
+    activeBtn();
+    return target;
 }
 
 // 전송 버튼 클릭 시 실행되는 action
