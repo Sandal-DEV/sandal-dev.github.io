@@ -137,82 +137,82 @@ const messages = {
 // const chatInputDiv = document.querySelector('.live-chat-input');
 // const chatTitleDiv = document.querySelector('.live-chat-titlebar');
 
-// class ChatDiv {
-//     constructor() {
-//         this._chatWrapDiv = document.createElement('div');
-//         this._profileDiv = document.createElement('div');
-//         this._iconI = document.createElement('i');
-//         this._userDiv = document.createElement('div');
-//         this._userNameDiv = document.createElement('div');
-//         this._chatMessageDiv = document.createElement('div');
-//         this._chatBubbleDiv = document.createElement('div');
-//         this._chatTimeDiv = document.createElement('div');
+class ChatDiv {
+    constructor() {
+        this._chatWrapDiv = document.createElement('div');
+        this._profileDiv = document.createElement('div');
+        this._iconI = document.createElement('i');
+        this._userDiv = document.createElement('div');
+        this._userNameDiv = document.createElement('div');
+        this._chatMessageDiv = document.createElement('div');
+        this._chatBubbleDiv = document.createElement('div');
+        this._chatTimeDiv = document.createElement('div');
 
-//         this.setChatDiv();
-//     }
+        this.setChatDiv();
+    }
 
-//     setChatDiv() {
-//         this._chatWrapDiv.append(this._profileDiv);
-//         this._profileDiv.append(this._iconI);
-//         this._chatWrapDiv.append(this._userDiv);
-//         this._userDiv.append(this._userNameDiv);
-//         this._userDiv.append(this._chatMessageDiv);
-//         this._chatMessageDiv.append(this._chatBubbleDiv);
-//         this._chatMessageDiv.append(this._chatTimeDiv);
+    setChatDiv() {
+        this._chatWrapDiv.append(this._profileDiv);
+        this._profileDiv.append(this._iconI);
+        this._chatWrapDiv.append(this._userDiv);
+        this._userDiv.append(this._userNameDiv);
+        this._userDiv.append(this._chatMessageDiv);
+        this._chatMessageDiv.append(this._chatBubbleDiv);
+        this._chatMessageDiv.append(this._chatTimeDiv);
 
-//         this._chatWrapDiv.classList.add('live-chat');
-//         this._profileDiv.classList.add('user-profile');
-//         this._profileDiv.classList.add('user-border');
-//         this._userDiv.classList.add('user-chat');
-//         this._userNameDiv.classList.add('user-name');
-//         this._chatMessageDiv.classList.add('chat');
-//         this._chatBubbleDiv.classList.add('chat-bubble');
-//         this._chatTimeDiv.classList.add('chat-time');
-//     }
-// }
+        this._chatWrapDiv.classList.add('live-chat');
+        this._profileDiv.classList.add('user-profile');
+        this._profileDiv.classList.add('user-border');
+        this._userDiv.classList.add('user-chat');
+        this._userNameDiv.classList.add('user-name');
+        this._chatMessageDiv.classList.add('chat');
+        this._chatBubbleDiv.classList.add('chat-bubble');
+        this._chatTimeDiv.classList.add('chat-time');
+    }
+}
 
-// function renderChat(messagesJSON) {
-//     //const chatList = messagesJSON;
-//     document.querySelector('.live-chat-room').innerHTML="";
-//     messagesJSON.forEach(chat => {
+function renderChat(messagesJSON) {
+    //const chatList = messagesJSON;
+    document.querySelector('.live-chat-room').innerHTML="";
+    messagesJSON.forEach(chat => {
 
-//         let chatDiv = new ChatDiv();
-//         chatDiv._chatWrapDiv.id = chat.type;
-//         chatDiv._iconI.className += chat.icon;
-//         chatDiv._userNameDiv.innerHTML = chat.user;
-//         chatDiv._profileDiv.style.borderColor = chat.color;
-//         chatDiv._chatBubbleDiv.innerHTML = chat.message;
-//         chatDiv._chatTimeDiv.innerHTML = chat.time;
+        let chatDiv = new ChatDiv();
+        chatDiv._chatWrapDiv.id = chat.type;
+        chatDiv._iconI.className += chat.icon;
+        chatDiv._userNameDiv.innerHTML = chat.user;
+        chatDiv._profileDiv.style.borderColor = chat.color;
+        chatDiv._chatBubbleDiv.innerHTML = chat.message;
+        chatDiv._chatTimeDiv.innerHTML = chat.time;
 
-//         document.querySelector('.live-chat-room').append(chatDiv._chatWrapDiv);
-//     })
-// }
+        document.querySelector('.live-chat-room').append(chatDiv._chatWrapDiv);
+    })
+}
 
-// function scrollBottom() {
-//     const chatWrapDiv = document.querySelector('.live-chat-room');
-//     chatWrapDiv.scrollTop = chatWrapDiv.scrollHeight;
-// }
+function scrollBottom() {
+    const chatWrapDiv = document.querySelector('.live-chat-room');
+    chatWrapDiv.scrollTop = chatWrapDiv.scrollHeight;
+}
 
-// function setChatHeight() {
-//     let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
-//     let chatTitleHeight = document.querySelector('.live-chat-titlebar').offsetHeight;
-//     let chatInputHeight = document.querySelector('.live-chat-input').offsetHeight;
+function setChatHeight() {
+    let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
+    let chatTitleHeight = document.querySelector('.live-chat-titlebar').offsetHeight;
+    let chatInputHeight = document.querySelector('.live-chat-input').offsetHeight;
 
-//     return (chatContainerHeight - chatTitleHeight - chatInputHeight) + "px";
-// }
+    return (chatContainerHeight - chatTitleHeight - chatInputHeight) + "px";
+}
 
-// function setChatContainerHeight() {
-//     let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
-//     return chatContainerHeight + "px";
-// }
+function setChatContainerHeight() {
+    let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
+    return chatContainerHeight + "px";
+}
 
-// function registerResizeCallback() {
-//     window.addEventListener("resize", resized);
-// }
+function registerResizeCallback() {
+    window.addEventListener("resize", resized);
+}
 
-// function resized() {
-//     DotNet.invokeMethodAsync("Sandal.WASM", 'OnBrowserResize').then(data => data);
-// }
+function resized() {
+    DotNet.invokeMethodAsync("Sandal.WASM", 'OnBrowserResize').then(data => data);
+}
 
 // function resizeChatHeight() {
 //     let chatContainerHeight = window.innerHeight;
