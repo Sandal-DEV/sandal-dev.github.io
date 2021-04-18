@@ -211,7 +211,7 @@ function registerResizeCallback() {
 }
 
 function resized() {
-    DotNet.invokeMethodAsync("Sandal.WASM", 'OnBrowserResize').then(data => data);
+    DotNet.invokeMethodAsync("Sandal.WASM", 'OnBrowserResize');//.then(data => data);
 }
 
 // function resizeChatHeight() {
