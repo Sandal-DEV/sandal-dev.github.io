@@ -1,67 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafrex/spa-github-pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+      // ----------------------------------------------------------------------
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. http://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // http://www.foo.tld/?p=/one/two&q=a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>가볍게 떠나는 여행 Sandal</title>
-    <base href="/" />
-    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="Sandal.WASM.styles.css" rel="stylesheet" />
-</head>
+      // If you're creating a Project Pages site and NOT using a custom domain,
+      // then set segmentCount to 1 (enterprise users may need to set it to > 1).
+      // This way the code will only replace the route part of the path, and not
+      // the real directory in which the app resides, for example:
+      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
+      // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
+      // Otherwise, leave segmentCount as 0.
+      var segmentCount = 1;
 
-<body>
-    <div id="app">Loading...</div>
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script>
-        function BlazorFocusElement(element) {
-            if (element instanceof HTMLElement) {
-                element.focus();
-            }
-        }
-        function EnterKeyHandler(element) {
-            var txtInput = document.getElementById("txtInput");
-            if (element instanceof HTMLElement) {
-                console.log("안녕?");
-
-                element.focus();
-                txtInput.focus();
-                element.click();
-                
-            }
-        }
     </script>
-    <script src="_framework/blazor.webassembly.js"></script>
-    <script src="js/chat.js"></script>
-    <script src="js/chatInput.js"></script>
-    <script src="js/decode.js"></script>
-    <script>
-        Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-            if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
-                return (async function () {
-                const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-                const originalResponseBuffer = await response.arrayBuffer();
-                const originalResponseArray = new Int8Array(originalResponseBuffer);
-                const decompressedResponseArray = BrotliDecode(originalResponseArray);
-                const contentType = type === 
-                    'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
-                return new Response(decompressedResponseArray, 
-                    { headers: { 'content-type': contentType } });
-                })();
-            }
-            }
-        });
-    </script>
-</body>
-
+  </head>
+  <body>
+  </body>
 </html>
