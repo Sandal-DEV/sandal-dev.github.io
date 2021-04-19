@@ -1,142 +1,3 @@
-// <-- Mockdata
-const messages = {
-    "messages": [
-    {
-        "user": "오늘만 사는 곰",
-        "type": "first-type",
-        "icon": "em em-bear",
-        "color": "#C1694F",
-        "message": "하이루",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "second-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "방가방가",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "third-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "아니 이게 뭐야? 진짜 대박이다 너무 좋은거 아님??? 세상세상 조와~~~",
-        "time": "10:46"
-    },
-    {
-        "user": "귀여운 고슴도치",
-        "type": "sixth-type",
-        "icon": "em em-hedgehog",
-        "color": "#774517",
-        "message": "ㅋㅋㅋㅋㅋ안녕안녕",
-        "time": "10:47"
-    },
-    {
-        "user": "오늘만 사는 곰",
-        "type": "first-type",
-        "icon": "em em-bear",
-        "color": "#C1694F",
-        "message": "하이루",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "second-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "방가방가",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "third-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "아니 이게 뭐야? 진짜 대박이다 너무 좋은거 아님??? 세상세상 조와~~~",
-        "time": "10:46"
-    },
-    {
-        "user": "귀여운 고슴도치",
-        "type": "sixth-type",
-        "icon": "em em-hedgehog",
-        "color": "#774517",
-        "message": "ㅋㅋㅋㅋㅋ안녕안녕",
-        "time": "10:47"
-    },
-    {
-        "user": "오늘만 사는 곰",
-        "type": "first-type",
-        "icon": "em em-bear",
-        "color": "#C1694F",
-        "message": "하이루",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "second-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "방가방가",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "third-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "아니 이게 뭐야? 진짜 대박이다 너무 좋은거 아님??? 세상세상 조와~~~",
-        "time": "10:46"
-    },
-    {
-        "user": "귀여운 고슴도치",
-        "type": "sixth-type",
-        "icon": "em em-hedgehog",
-        "color": "#774517",
-        "message": "ㅋㅋㅋㅋㅋ안녕안녕",
-        "time": "10:47"
-    },
-    {
-        "user": "오늘만 사는 곰",
-        "type": "first-type",
-        "icon": "em em-bear",
-        "color": "#C1694F",
-        "message": "하이루",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "second-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "방가방가",
-        "time": "10:46"
-    },
-    {
-        "user": "내일이 없는 돌고래",
-        "type": "third-type",
-        "icon": "em em-dolphin",
-        "color": "#3B88C3",
-        "message": "아니 이게 뭐야? 진짜 대박이다 너무 좋은거 아님??? 세상세상 조와~~~",
-        "time": "10:46"
-    },
-    {
-        "user": "귀여운 고슴도치",
-        "type": "sixth-type",
-        "icon": "em em-hedgehog",
-        "color": "#774517",
-        "message": "ㅋㅋㅋㅋㅋ안녕안녕",
-        "time": "10:47"
-    },
-]};
-// -->
-
-//const chatRoomDiv = document.querySelector('.live-chat-room');
-//const chatContainerDiv = document.querySelector('.live-chat-container');
-// const chatInputDiv = document.querySelector('.live-chat-input');
-// const chatTitleDiv = document.querySelector('.live-chat-titlebar');
-
 class ChatDiv {
     constructor() {
         this._chatWrapDiv = document.createElement('div');
@@ -163,6 +24,7 @@ class ChatDiv {
         this._chatWrapDiv.classList.add('live-chat');
         this._profileDiv.classList.add('user-profile');
         this._profileDiv.classList.add('user-border');
+        this._iconI.classList.add('em');
         this._userDiv.classList.add('user-chat');
         this._userNameDiv.classList.add('user-name');
         this._chatMessageDiv.classList.add('chat');
@@ -172,13 +34,12 @@ class ChatDiv {
 }
 
 function renderChat(messagesJSON) {
-    //const chatList = messagesJSON;
     document.querySelector('.live-chat-room').innerHTML="";
     messagesJSON.forEach(chat => {
 
         let chatDiv = new ChatDiv();
         chatDiv._chatWrapDiv.id = chat.type;
-        chatDiv._iconI.className += chat.icon;
+        chatDiv._iconI.classList.add(chat.icon);
         chatDiv._userNameDiv.innerHTML = chat.user;
         chatDiv._profileDiv.style.borderColor = chat.color;
         chatDiv._chatBubbleDiv.innerHTML = chat.message;
@@ -194,15 +55,21 @@ function scrollBottom() {
 }
 
 function setChatHeight() {
-    let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
+    let headerHeight = 16//document.querySelector('.header-container').offsetHeight;
     let chatTitleHeight = document.querySelector('.live-chat-titlebar').offsetHeight;
     let chatInputHeight = document.querySelector('.live-chat-input').offsetHeight;
+    let chatContainerHeight = window.innerHeight - headerHeight;//document.documentElement.clientHeight;
+    console.log(headerHeight);
+    console.log(chatTitleHeight);
+    console.log(chatInputHeight);
+    console.log(chatContainerHeight);
 
     return (chatContainerHeight - chatTitleHeight - chatInputHeight) + "px";
 }
 
 function setChatContainerHeight() {
-    let chatContainerHeight = window.innerHeight;//document.documentElement.clientHeight;
+    let headerHeight = 16//document.querySelector('.header-container').offsetHeight;
+    let chatContainerHeight = window.innerHeight - headerHeight;//document.documentElement.clientHeight;
     return chatContainerHeight + "px";
 }
 
