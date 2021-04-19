@@ -55,7 +55,7 @@ function scrollBottom() {
 }
 
 function setChatHeight() {
-    let headerHeight = 16//document.querySelector('.header-container').offsetHeight;
+    let headerHeight = 64;//document.querySelector('.header-container').offsetHeight;
     let chatTitleHeight = document.querySelector('.live-chat-titlebar').offsetHeight;
     let chatInputHeight = document.querySelector('.live-chat-input').offsetHeight;
     let chatContainerHeight = window.innerHeight - headerHeight;//document.documentElement.clientHeight;
@@ -68,7 +68,7 @@ function setChatHeight() {
 }
 
 function setChatContainerHeight() {
-    let headerHeight = 16//document.querySelector('.header-container').offsetHeight;
+    let headerHeight = 64;//document.querySelector('.header-container').offsetHeight;
     let chatContainerHeight = window.innerHeight - headerHeight;//document.documentElement.clientHeight;
     return chatContainerHeight + "px";
 }
