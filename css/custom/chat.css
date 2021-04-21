@@ -1,5 +1,6 @@
 .live-chat-container {
     position: sticky;
+    top : 0;
     right: 0;
     width: 336px;
     max-height: 1080px;
